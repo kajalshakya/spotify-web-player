@@ -1,3 +1,18 @@
+html,
+body {
+    background-color: #000;
+    height: 100%;
+    overflow: hidden;
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    color: #fff;
+    overflow: visible;
+}
+
+
 * {
     font-family: "Montserrat", sans-serif;
     margin: 0;
@@ -10,6 +25,7 @@
     height: 100vh;
     padding: 0.5rem;
     background-color: #000;
+    box-sizing: border-box;
 }
 
 .sidebar {
@@ -17,14 +33,15 @@
     width: 340px;
     border-radius: 1rem;
     margin-right: 0.5rem;
-     overflow: auto;
+    overflow: hidden;
+     
 }
 
 .main-content {
     background-color: #121212;
     flex: 1;
     border-radius: 1rem;
-    overflow: auto;
+    overflow:auto;
     padding: 0 1.5rem 0 1.5rem;
 }
 
