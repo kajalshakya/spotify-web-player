@@ -1,53 +1,63 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Basic page settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
-        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css">
 
-    <title>Spotify - Web Player: Music for everyone</title>
+    <!-- Page title -->
+    <title>Spotify - Web Player</title>
 
+    <!-- Google Fonts: Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <link rel="icon" href="logo.png">
+    <!-- Website favicon and CSS file -->
+    <link rel="icon" href="picture/logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Main container for the entire Spotify layout -->
     <div class="main">
 
-        <!-- sidebar_menu -->
+        <!-- Sidebar: Navigation and library -->
         <div class="sidebar">
 
+            <!-- Home and Search navigation -->
             <div class="nav">
 
-                <div class="nav-option" style="opacity: 1;">
-                    <i class="fa-solid fa-house" style="background: transparent;"></i>
-                    <a href="#" style="background: transparent;">Home</a>
+                <div class="nav-option" style="opacity:1;">
+                    <i class="fa-solid fa-house"></i>
+                    <a href="#">Home</a>
                 </div>
 
                 <div class="nav-option">
-                    <i class="fa-solid fa-magnifying-glass" style="background: transparent;"></i>
-                    <a href="#" style="background: transparent;">Search</a>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <a href="#">Search</a>
                 </div>
 
             </div>
 
+            <!-- Library section -->
             <div class="library">
 
+                <!-- Library heading and action icons -->
                 <div class="options">
 
                     <div class="lib-option nav-option">
-                        <img src="library_icon.png">
+                        <img src="picture/library_icon.png" alt="Library">
                         <a href="#">Your Library</a>
                     </div>
 
@@ -58,192 +68,260 @@
 
                 </div>
 
+                <!-- Create playlist prompt -->
                 <div class="lib-box">
-
                     <div class="box">
                         <p class="box-p1">Create your first playlist</p>
-                        <p class="box-p2">It's easy,we'll help you</p>
+                        <p class="box-p2">It's easy, we'll help you</p>
                         <button class="badge">Create playlist</button>
                     </div>
-
                 </div>
 
+                <!-- Podcast discovery prompt -->
                 <div class="lib-box">
-
                     <div class="box">
-                        <p class="box-p1">Let's find some podcast</p>
-                        <p class="box-p2">We'll keep you update</p>
-                        <button class="badge">Browse podacst</button>
+                        <p class="box-p1">Let's find some podcasts</p>
+                        <p class="box-p2">We'll keep you updated</p>
+                        <button class="badge">Browse podcasts</button>
                     </div>
-
                 </div>
 
             </div>
 
         </div>
+        <!-- End of sidebar -->
 
-        <!-- main_content -->
+
+        <!-- Main content area -->
         <div class="main-content">
 
+            <!-- Sticky navigation bar -->
             <div class="sticky-nav">
 
+                <!-- Backward and forward navigation icons -->
                 <div class="sticky-nav-icons">
-                    <img src="backward_icon.png">
-                    <img src="forward_icon.png" class="hide">
+                    <img src="picture/backward_icon.png" alt="Back">
+                    <img src="picture/forward_icon.png" class="hide" alt="Forward">
                 </div>
 
+                <!-- Premium, app installation and profile options -->
                 <div class="sticky-nav-options">
 
                     <button class="badge nav-item hide">
-                        Explore premium
+                        Explore Premium
                     </button>
 
                     <button class="badge nav-item dark-badge">
-                        <i class="fa-duotone fa-solid fa-circle-down"></i>
+                        <i class="fa-solid fa-circle-down"></i>
                         Install app
                     </button>
 
                     <i class="fa-solid fa-circle-user nav-item"
-                        style="font-size: 28px; padding-top: 18px; margin-left: 6px; background-color: #121212;"></i>
+                        style="font-size:28px; padding-top:18px; margin-left:6px;"></i>
 
                 </div>
 
             </div>
+            <!-- End of sticky navigation -->
 
+
+            <!-- Recently played section -->
             <h2 class="title">Recently played</h2>
 
             <div class="card-container">
 
-                <div class="card">
-                    <img src="card1img.jpeg" class="card-img">
-                    <p class="card-title">Top 50 - Global</p>
-                    <p class="card-info">You daily update of the most played...</p>
+                <!-- data-song="0" maps this card to the first song in script.js -->
+                <div class="card" data-song="0" role="button" tabindex="0">
+                    <img src="picture/card1img.jpeg" class="card-img" alt="Top 50 Global">
+                    <p class="card-title">Tum Mile</p>
+                    <p class="card-info">Pritam, Neeraj shridhar</p>
                 </div>
 
             </div>
+            <!-- End of recently played section -->
 
+
+            <!-- Trending songs section -->
             <h2 class="title">Trending now near you</h2>
 
             <div class="card-container">
 
-                <div class="card">
-                    <img src="card2img.jpeg" class="card-img">
+                <!-- data-song="1" maps to songs[1] in script.js -->
+                <div class="card" data-song="1" role="button" tabindex="0">
+                    <img src="picture/card2img.jpeg" class="card-img" alt="Music cover">
                     <p class="card-title">Mahiye Jinna Sohna</p>
+                    <p class="card-info">Darshan Raval</p>
+                </div>
+
+                <!-- data-song="2" maps to songs[2] in script.js -->
+                <div class="card" data-song="2" role="button" tabindex="0">
+                    <img src="picture/card3img.jpeg" class="card-img" alt="Music cover">
+                    <p class="card-title">Mere Paas Tum Ho</p>
+                    <p class="card-info">Rahat Fateh Ali Khan</p>
+                </div>
+
+                <!-- data-song="3" maps to songs[3] in script.js -->
+                <div class="card" data-song="3" role="button" tabindex="0">
+                    <img src="picture/card4img.jpeg" class="card-img" alt="Music cover">
+                    <p class="card-title">Oo Meri Laila</p>
+                    <p class="card-info">Atif Aslam, Jyotica Tangri</p>
+                </div>
+
+                <!-- data-song="4" maps to songs[4] in script.js -->
+                <div class="card" data-song="4" role="button" tabindex="0">
+                    <img src="picture/card5img.jpeg" class="card-img" alt="Music cover">
+                    <p class="card-title">Darmiyaan</p>
+                    <p class="card-info">Rekha Bhardwaj, Raghav Kaushik, Amrita Saluja</p>
+                </div>
+
+                <!-- data-song="5" maps to songs[5] in script.js -->
+                <div class="card" data-song="5" role="button" tabindex="0">
+                    <img src="picture/card6img.jpeg" class="card-img" alt="Music cover">
+                    <p class="card-title">Tera Zikr</p>
                     <p class="card-info">Darshan Rawal</p>
                 </div>
 
-                <div class="card">
-                    <img src="card3img.jpeg" class="card-img">
-                    <p class="card-title">Mere Paas Tum Ho</p>
-                    <p class="card-info">Rahat Fateh Ali Khan</p>
-                </div>
-
-                <div class="card">
-                    <img src="card4img.jpeg" class="card-img">
-                    <p class="card-title">Na Ready(From"L...</p>
-                    <p class="card-info">Anuridh, Thalapathy Vijay</p>
-                </div>
-
-                <div class="card">
-                    <img src="card3img.jpeg" class="card-img">
-                    <p class="card-title">Mere Paas Tum Ho</p>
-                    <p class="card-info">Rahat Fateh Ali Khan</p>
-                </div>
-
-                <div class="card">
-                    <img src="card4img.jpeg" class="card-img">
-                    <p class="card-title">Na Ready(From"L...</p>
-                    <p class="card-info">Anuridh, Thalapathy Vijay</p>
-                </div>
-
             </div>
+            <!-- End of trending songs section -->
 
+
+            <!-- Featured charts section -->
             <h2 class="title">Featured charts</h2>
 
             <div class="card-container">
 
-                <div class="card">
-                    <img src="card5img.jpeg" class="card-img">
-                    <p class="card-title">Top songs Global</p>
-                    <p class="card-info">Your weekly update of the most played tracks right...</p>
+                <!-- data-song="6" maps to songs[6] in script.js -->
+                <div class="card" data-song="6" role="button" tabindex="0">
+                    <img src="picture/card7img.jpeg" class="card-img" alt="Global chart">
+                    <p class="card-title">Bin Tere</p>
+                    <p class="card-info">Vishal-Shekhar, shafaqat Amanat ali, Sunidhi Chauhan</p>
                 </div>
 
-                <div class="card">
-                    <img src="card6img.jpeg" class="card-img">
-                    <p class="card-title">Top Songs India</p>
-                    <p class="card-info">Your weekly update of the most played tracks right...</p>
+                <!-- data-song="7" maps to songs[7] in script.js -->
+                <div class="card" data-song="7" role="button" tabindex="0">
+                    <img src="picture/card8img.jpeg" class="card-img" alt="India chart">
+                    <p class="card-title">Teri Ore</p>
+                    <p class="card-info">Pritam, Rahat Fateh Ali Khan, Shreya Ghoshal, Mayur Puri</p>
                 </div>
 
-                <div class="card">
-                    <img src="card1img.jpeg" class="card-img">
-                    <p class="card-title">Top 50 - Global</p>
-                    <p class="card-info">You daily update of the most played...</p>
+                <!-- data-song="8" maps to songs[8] in script.js -->
+                <div class="card" data-song="8" role="button" tabindex="0">
+                    <img src="picture/card9img.jpeg" class="card-img" alt="Global chart">
+                    <p class="card-title">Shukran Allah</p>
+                    <p class="card-info">Salim-Sulaiman, Sonu Nigam, Shreya Ghoshal, Salim Merchant</p>
                 </div>
 
             </div>
+            <!-- End of featured charts section -->
 
+
+            <!-- Footer with a horizontal line -->
             <div class="footer">
                 <div class="line"></div>
             </div>
 
         </div>
+        <!-- End of main content -->
 
-        <!-- music-player -->
+
+        <!-- Fixed music player at the bottom -->
         <div class="music-player">
 
+            <!-- Currently playing song details -->
             <div class="album">
 
-                <img src="day.jpeg">
+                <img src="picture/day.jpeg" alt="Album cover">
 
-                <p class="p1">Daylight</p>
-                <p class="p2">David Kushneer</p>
+                <p class="p1">Demo Track</p>
+                <p class="p2">Sample Audio</p>
 
+                <!-- Like and music icons -->
                 <div class="album-icon">
                     <i class="fa-solid fa-heart"></i>
-                    <i class="fa-sharp fa-solid fa-music"></i>
+                    <i class="fa-solid fa-music"></i>
                 </div>
 
             </div>
 
+
+            <!-- Music playback controls -->
             <div class="player">
 
+                <!-- Shuffle, previous, play/pause, next and repeat buttons -->
                 <div class="player-control">
-                    <img src="player_icon1.png" class="player-control-icon">
-                    <img src="player_icon2.png" class="player-control-icon">
-                    <img src="player_icon3.png" class="player-control-icon play-icon">
-                    <img src="player_icon4.png" class="player-control-icon">
-                    <img src="player_icon5.png" class="player-control-icon">
+
+                    <button type="button" class="music-btn" id="shuffle" aria-label="Shuffle">
+                        <img src="picture/player_icon1.png" class="player-control-icon" alt="Shuffle">
+                    </button>
+
+                    <button type="button" class="music-btn" id="previous" aria-label="Previous">
+                        <img src="picture/player_icon2.png" class="player-control-icon" alt="Previous">
+                    </button>
+
+                    <button type="button" class="music-btn" id="play" aria-label="Play or pause">
+                        <img src="picture/player_icon3.png" class="player-control-icon play-icon" alt="Play">
+                    </button>
+
+                    <button type="button" class="music-btn" id="next" aria-label="Next">
+                        <img src="picture/player_icon4.png" class="player-control-icon" alt="Next">
+                    </button>
+
+                    <button type="button" class="music-btn" id="repeat" aria-label="Repeat">
+                        <img src="pictureplayer_icon5.png" class="player-control-icon" alt="Repeat">
+                    </button>
+
                 </div>
 
+
+                <!-- Song progress bar and playback timestamps -->
                 <div class="playback-bar">
 
-                    <span class="curr-time">00:00</span>
+                    <span class="curr-time" id="current-time">00:00</span>
 
-                    <input type="range" min="0" max="100" class="progress-bar" step="1">
+                    <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="0"
+                        class="progress-bar"
+                        id="progress"
+                        aria-label="Song progress">
 
-                    <span class="tot-time">03:55</span>
+                    <span class="tot-time" id="total-time">00:00</span>
 
                 </div>
 
             </div>
 
+
+            <!-- Volume control -->
             <div class="control-icons">
 
-                <i class="fa-solid fa-forward-step"></i>
-                <i class="fa-solid fa-microphone-lines"></i>
-                <i class="fa-solid fa-sliders"></i>
-                <i class="fa-solid fa-volume-high"></i>
+                <i class="fa-solid fa-volume-high" id="volume-icon"></i>
 
-            </div>
+                <input
+                    type="range"
+                    id="volume"
+                    min="0"
+                    max="1"
+                    value="0.7"
+                    step="0.01"
+                    aria-label="Volume">
 
-            <div>
-                <input type="range" class="progress-bar" min="0" max="100" value="30">
             </div>
 
         </div>
+        <!-- End of music player -->
 
     </div>
+    <!-- End of main container -->
+
+
+    <!-- Audio element controlled by script.js -->
+    <audio id="audio" preload="metadata"></audio>
+
+    <!-- JavaScript for song selection and music player controls -->
+    <script src="script.js"></script>
 
 </body>
-
 </html>
